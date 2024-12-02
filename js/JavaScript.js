@@ -1,62 +1,31 @@
-let currentSlide = 0;
-let slideInterval;
+const canvas = document.getElementById('matrixCanvas');
+const ctx = canvas.getContext('2d');
 
-function moveSlide(direction) {
-  const slides = document.querySelectorAll('.carousel-item');
-  const totalSlides = slides.length;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-  slides[currentSlide].classList.add('active');
-  updateCarousel();
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+const drops = Array.from({ length: columns }).fill(1);
+
+function drawMatrix() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#0f0';
+    ctx.font = '20px monospace';
+    drops.forEach((y, i) => {
+        const char = Math.random() > 0.995 ? String.fromCodePoint(0x1F600 + Math.floor(Math.random() * 79)) : String.fromCharCode(33 + Math.random() * 94);
+        ctx.fillText(char, i * 20, y);
+        drops[i] = y > canvas.height || Math.random() > 0.95 ? 0 : y + 20;
+    });
 }
 
-function updateCarousel() {
-  const slides = document.querySelectorAll('.carousel-item');
-  const totalSlides = slides.length;
-  
-  for (let i = 0; i < totalSlides; i++) {
-    slides[i].style.opacity = i === currentSlide ? 1 : 0;
-  }
-}
+setInterval(drawMatrix, 50);
 
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.carousel-item');
-  slides[0].classList.add('active');
-  updateCarousel();
-
-  document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
-  document.querySelector('.next').addEventListener('click', () => moveSlide(1));
-
-  const menuBtn = document.getElementById('menu-btn');
-  const navLinks = document.getElementById('nav-links');
-
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-});
-
-/* Botones Menú */ 
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-
-      const targetId = this.getAttribute('href').substring(1); // Obtener el id de destino
-      const targetSection = document.getElementById(targetId); // Encontrar la sección correspondiente
-
-      // Desplazarse suavemente hacia la sección
-      targetSection.scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
-});
-
-
-
-
-
-
+window.onscroll = function() {
+    document.getElementById('scrollToTop').style.display = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? "block" : "none";
+};
