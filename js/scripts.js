@@ -29,3 +29,13 @@ function scrollToTop() {
 window.onscroll = function() {
     document.getElementById('scrollToTop').style.display = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? "block" : "none";
 };
+
+
+// Obtener el año UTC actual y actualizar el contenido del elemento con id "current-year"
+document.addEventListener("DOMContentLoaded", () => {
+    const currentYearElement = document.getElementById("current-year");
+    if (currentYearElement) {
+        const currentYearUTC = new Date().getUTCFullYear();
+        currentYearElement.textContent = currentYearUTC;
+    }
+});
