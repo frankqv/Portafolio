@@ -5,68 +5,70 @@
 
 body, html {
     height: 100%;
-    color: #0f0;
+    color: rgb(0, 145, 255);
     background: rgba(231, 53, 53, 0);
     font-family: 'Courier New', Courier, monospace;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    margin: 0; 
+    padding: 0;
+    overflow-x: hidden; 
 }
 
-canvas#matrixCanvas {
+#matrixCanvas {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vh;
+    height: 100vh;
     filter: blur(1px);
     z-index: -10;
 }
 
-header, main, footer {
-    position: relative;
-    z-index: 10;
-}
-
 header {
     background: rgba(51, 68, 71, 0.75);
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 main {
-    margin: 20px auto;
     max-width: 1200px;
+    margin: 20px auto;
 }
 
+
 section {
-    background-color: var(--main-color);
+    margin: 0 auto 20px;
     padding: 20px;
-    margin-bottom: 20px;
+    background-color: var(--main-color);
     border-radius: 5px;
     color: white;
+    max-width: 90%; 
 }
+
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     background: var(--main-color);
     color: white;
-    z-index: 5;
 }
 
 #scrollToTop {
@@ -74,15 +76,31 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 12;
     padding: 10px 20px;
     background: #ff6347;
     color: white;
     border-radius: 5px;
     cursor: pointer;
-   
 }
 
-#scrollToTop:hover {
-    background: #ff4500;
+/* Responsivo */
+@media (max-width: 768px) {
+    main {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #scrollToTop {
+        bottom: 10px;
+        right: 10px;
+    }
 }

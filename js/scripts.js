@@ -8,6 +8,9 @@ const fontSize = 16;
 const columns = canvas.width / fontSize;
 const drops = Array.from({ length: columns }).fill(1);
 
+
+
+
 function drawMatrix() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -19,8 +22,8 @@ function drawMatrix() {
         drops[i] = y > canvas.height || Math.random() > 0.95 ? 0 : y + 20;
     });
 }
-
 setInterval(drawMatrix, 50);
+
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
