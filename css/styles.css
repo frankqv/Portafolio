@@ -48,6 +48,11 @@ nav ul li a {
     font-weight: bold;
 }
 
+li:hover, a:hover {
+    color:aqua;
+}
+
+
 main {
     max-width: 1200px;
     margin: 20px auto;
@@ -70,6 +75,10 @@ th {
     color: var(--text-color);
     background-color:  rgba(11, 101, 109, 0.367);
     padding: 1vh auto;
+}
+p {
+    color: white;
+    background-color:  rgba(0, 0, 0, 0.367);
 }
 
 footer {
