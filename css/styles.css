@@ -26,7 +26,7 @@ body, html {
 
 header {
     background: rgba(51, 68, 71, 0.75);
-    padding: 20px 0;
+    padding: 10 auto;
     text-align: center;
 }
 
@@ -40,6 +40,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    
 }
 
 nav ul li a {
@@ -49,7 +50,9 @@ nav ul li a {
 }
 
 li:hover, a:hover {
-    color:aqua;
+  /*color:aqua;*/
+    transform: scale(1.4);
+    color: rgba(51, 68, 71, 0.75);
 }
 
 
