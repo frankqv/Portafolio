@@ -3,155 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Francisco Quiñonez</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Portfolio de Frank-QV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="heart.css">
 </head>
 <body>
     <canvas id="matrixCanvas"></canvas>
-    <header>
-        <h1>Francisco Quiñonez</h1>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="logo">Frank-QV</h1>
+        <div class="actions">
+            <a href="https://linkedin.com/in/francisco-quinonez-v-frankqv-916506327" class="header-link" target="_blank">Contacto</a>
+            <a href="https://github.com/frankqv" class="header-link" target="_blank">
+                <svg height="32" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32" class="octicon octicon-mark-github v-align-middle">
+                    <path d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z"></path>
+                </svg>
+                GitHub</a>
+            <div class="theme-toggle">
+                <button id="theme-toggle" class="theme-btn">🌙 Modo Oscuro</button>
+            </div>
+        </div>
     </header>
-      <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#sobre-mi">Skills</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="https://linkedin.com/in/francisco-quinonez-v-frankqv-916506327">Contacto</a></li>
-          |
-          </ul>
-      </nav>
 
-    <main>
-        <section id="inicio">
-            <h2>Bienvenido a mi Portfolio</h2> 
-            <div align="center">
-                  <p>
-                    <b>Aquí desarrollo, aprendo y me sumerjo en el código.<br>
-                      <br>¡Sigue explorando y descubre más! </b><br>
-                        <br>
-                        <br>⠀⠀⠀⠀⠀⠀⢀⣠⣤⣶⣶⡞⡀⣤⣬⣴⠀⠀⢳⣶⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀
-                        <br>⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⡇⠀⢸⣿⠿⣿⡇⠀⠀⠸⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀
-                        <br>⠀⠀⢠⡾⣫⣿⣻⣿⣽⣿⡇⠀⠈⢿⣧⡝⠟⠀⠀⢸⣿⣿⣿⣿⣿⣟⢷⣄⠀⠀
-                        <br>⠀⢠⣯⡾⢿⣿⣿⡿⣿⣿⣿⣆⣠⣶⣿⣿⣷⣄⣰⣿⣿⣿⣿⣿⣿⣿⢷⣽⣄⠀
-                        <br>⢠⣿⢋⠴⠋⣽⠋⡸⢱⣯⡿⣿⠏⣡⣿⣽⡏⠹⣿⣿⣿⡎⢣⠙⢿⡙⠳⡙⢿⠄
-                        <br>⣰⢣⣃⠀⠊⠀⠀⠁⠘⠏⠁⠁⠸⣶⣿⡿⢿⡄⠈⠀⠁⠃⠈⠂⠀⠑⠠⣈⡈⣧ 
-                        <br>⡏⡘⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡥⢄⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⢸
-                        <br>⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣄⣸⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢨
-                        <br>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈
-                        <br>⠀              ⡳⣶⣄⡀⠀
-                        <br>⠀⠀⠀⠀⠀⠀⢀⣠⣤⣶⣶⡞⡀⣤⣬⣴⠀⠀⢳⣶⣶⣤⣄⡀⠀⠀
-                  </p>
+    <!-- Main -->
+    <main class="main-content">
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="intro">
+                <h2>Hola, soy <strong>FrankQV</strong></h2>
+                <p>Ingeniero de Software con enfoque en desarrollo web. Tengo experiencia en la creación de sitios web responsivos y eficientes, mejorando la experiencia del usuario mediante diseño y funcionalidad.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn">🔗</a>
+                    <a href="#" aria-label="Correo electrónico">📧</a>
+                    <a href="#" aria-label="YouTube">📹</a>
+                </div>
+                <p><b>Aquí desarrollo, aprendo y me sumerjo en el código.<br> ¡Sigue explorando y descubre más!</b></p>
+            </div>
+
+            <div class="about-me">
+                <h3>Sobre Mí</h3>
+                <p>Soy un desarrollador de software fullstack colombiano. Mis herramientas principales son:</p>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Php</li>
+                    <li>Django</li>
+                    <li>React</li>
+                    <li>.NET C#</li>
+                    <li>MySql Workbench</li>
+                    <li>Git</li>
+                    <li>Certificado en Scrum y metodologías ágiles</li>
+                    Apasionado por aprender y crecer constantemente y siempre buscando colaborar en proyectos que desafíen mis habilidades.
+                </ul>
+                <p>Más allá de la programación, disfruto del tiempo en familia, relajarme en casa y ver películas.</p>
             </div>
         </section>
-        <section id="sobre-mi">
-            <h2>About me</h2>
-            <p>
-              <br>  Soy un desarrollador con experiencia en la creación de soluciones innovadoras para aplicaciones web y de escritorio. Mi enfoque principal es construir proyectos funcionales y atractivos, manteniendo un balance entre código limpio y diseño eficiente. 🛠️✨
-              <br>  
-              <br>   • 🎓 Certificado en Scrum y metodologías ágiles.
-              <br>   • 🌿 Apasionado por aprender y crecer constantemente.
-              <br>   • 🎉 ¡Siempre buscando colaborar en proyectos que desafíen mis habilidades!
-              <br>  
-              <br>  Actualmente estoy profundizando mis conocimientos en:
-              <br>  
-              <br>   • React: Creación de interfaces dinámicas y SPA.
-              <br>   • .NET: Desarrollo de aplicaciones empresariales robustas.
-              <br>   • NumPy y Pandas: Análisis y manipulación avanzada de datos.
-              <br>   • Jupyter Notebooks: Exploración de datos y desarrollo interactivo con Python.
-              </p>
 
+        <!-- Cards Section -->
+        <section class="grid">
+            <!-- Card: CV -->
+            <div class="card">
+                <h3>CV</h3>
+                <iframe src="cv.pdf" frameborder="0" class="cv-preview"></iframe>
+                <p>Ver y descargar mi curriculum haciendo clic en el botón de abajo.</p>
+                <a href="cv.pdf" download class="btn">Descargar curriculum 📄</a>
+            </div>
+
+            <!-- Card: Proyectos -->
+            <div class="card">
+                <h3>Proyectos</h3>
+                <p>Próximamente...</p>
+            </div>
+
+            <!-- Card: Estudios -->
+            <div class="card">
+                <h3>Estudios</h3>
+                <p>
+                    <span class="badge">SENA</span> <br>
+                    <span class="badge">Platzi</span> <br>
+                    <span class="badge">Udemy</span> <br>
+                    <span class="badge">YouTube</span> <br>
+                </p>
+            </div>
+
+            <!-- Card: Experiencia -->
+            <div class="card">
+                <h3>Experiencia</h3>
+                <p><strong>Ingeniero de desarrollo</strong><br> Desarrollos web modernos y escalables.</p>
+                <p><strong>Analista de Soporte Técnico</strong><br> ETB Colombia (2024 - 2024)</p>
+                <a href="#" class="view-more">Ver más</a>
+            </div>
+
+            <!-- Card: Frase -->
+            <div class="card">
+                <h3>Frase</h3>
+                <blockquote>“Si puedes imaginarlo, puedes programarlo.”<br>– Alejandro Taboada</blockquote>
+            </div>
+
+            <!-- Card: Otros -->
+            <div class="card">
+                <h3>Otros</h3>
+                <p>Sección para cualquier otro contenido futuro.</p>
+            </div>
         </section>
-        <section id="skills">
-            <h2>🦾🛠️Skills</h2>
-            <div align="center">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Lenguajes</th>
-                      <th>Front-End</th>
-                      <th>Back-End</th>
-                      <th>Otros</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <a href="https://www.python.org/" target="_blank">
-                          <img alt="Python" src="https://img.shields.io/badge/Python-blue?style=flat-square&logo=Python&labelColor=FFFF00&color=4682B4">
-                        </a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-                          <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-FFD700?logo=JavaScript&logoColor=black&labelColor=ffeb1d&color=000000">
-                        </a>
-                        <a href="https://www.php.net/" target="_blank">
-                          <img alt="PHP" src="https://img.shields.io/badge/PHP-purple?logo=php&logoColor=ffffff&labelColor=572364&color=000000">
-                        </a>
-                        <a href="https://openjdk.org/" target="_blank">
-                          <img alt="Java" src="https://img.shields.io/badge/Java-007396?logo=openjdk&logoColor=white&labelColor=007396&color=red">
-                        </a>
-                      </td>
-                      <td>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-                          <img alt="HTML5" src="https://img.shields.io/badge/HTML5-orange?style=flat-square&logo=html5&logoColor=white">
-                        </a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                          <img alt="CSS" src="https://img.shields.io/badge/CSS-blue?style=flat-square&logo=css3&logoColor=white">
-                        </a>
-                        <a href="https://getbootstrap.com/" target="_blank">
-                          <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-path?style=flat&logo=bootstrap&labelColor=ffffff&color=000000">
-                        </a>
-                        <a href="https://reactjs.org/" target="_blank">
-                          <img alt="React" src="https://img.shields.io/badge/React-path?style=flat&logo=react&labelColor=f1f1f1&color=87CEEB">
-                        </a>
-                      </td>
-                      <td>
-                        <a href="https://nodejs.org/" target="_blank">
-                          <img alt="Node.js" src="https://img.shields.io/badge/Node.js-green?style=flat-square&logo=node.js&labelColor=339933&color=000000&logoColor=white">
-                        </a>
-                        <a href="https://www.djangoproject.com/" target="_blank">
-                          <img alt="Django" src="https://img.shields.io/badge/Django-blue?style=flat-square&logo=django&labelColor=092E20&color=000000">
-                        </a>
-                        <a href="https://dotnet.microsoft.com/" target="_blank">
-                          <img alt=".NET" src="https://img.shields.io/badge/C%23_.NET-purple?style=flat-square&logo=.net&logoColor=white&labelColor=8A2BE2">
-                        </a>
-                      </td>
-                      <td>
-                        <a href="https://www.linux.org/" target="_blank">
-                          <img alt="Linux" src="https://img.shields.io/badge/Linux-yellow?logo=linux&logoColor=black&labelColor=ffe900&color=000000">
-                        </a>
-                          <a href="https://www.mysql.com/" target="_blank">
-                          <img alt="MySQL" src="https://img.shields.io/badge/MySQL-blue?style=flat-square&logo=mysql&labelColor=00758F&color=000000&logoColor=white">
-                        </a>
-                        <a href="https://www.apachefriends.org/index.html" target="_blank">
-                          <img alt="XAMPP" src="https://img.shields.io/badge/XAMPP-orange?style=flat-square&logo=xampp&logoColor=white&labelColor=FF4500&color=000000">
-                        </a>
-                        <a href="https://pandas.pydata.org/" target="_blank">
-                          <img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white">
-                        </a>
-                        <a href="https://numpy.org/" target="_blank">
-                          <img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white">
-                        </a>
-                        <a href="https://jupyter.org/" target="_blank">
-                          <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white">
-                        </a>
-                        <a href="https://www.atlassian.com/software/jira" target="_blank">
-                          <img alt="JIRA" src="https://img.shields.io/badge/JIRA-0052CC?style=flat-square&logo=jira&logoColor=white&labelColor=0052CC&color=101010">
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-        </section>
-        <section id="proyectos">
-            <h2>Proyectos</h2>
-            <p>Ejemplos destacados de trabajos y colaboraciones anteriores.</p>
-        </section>
-        <button id="scrollToTop" onclick="scrollToTop()">Arriba</button>
     </main>
-    <footer>
-        <p><strong>&copy; FrankQV Dev <span id="current-year"></span></strong> Todos los derechos reservados.</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-content">
+            <a class="footer-links" href="https://linkedin.com/in/francisco-quinonez-v-frankqv-916506327">
+                Built by FranK-QV
+            </a>with 
+            <span class="corazon"></span>  <span id="current-year"></span> 
+            <strong>&copy; All rights reserved.</strong>
+        </p>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
