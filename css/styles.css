@@ -6,6 +6,14 @@
   --tertiary: #B2D942;
   --quaternary: #D1CB95;
 }
+
+/* Main Content */
+.main-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .parent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -19,49 +27,49 @@
   margin: 10px auto;
 }
 
-.parent div{
+.parent section{
   background-color:#3498db;
 }
   
-.div1 {
+.Sect1 {
   grid-column: span 3 / span 3;
   grid-row: span 4 / span 4;
 }
 
-.div2 {
+.Sect2 {
   grid-row: span 4 / span 4;
   grid-column-start: 4;
 }
 
-.div3 {
+.Sect3 {
   grid-row: span 4 / span 4;
   grid-row-start: 5;
 }
 
-.div4 {
+.Sect4 {
   grid-row: span 2 / span 2;
   grid-row-start: 5;
 }
 
-.div5 {
+.Sect5 {
   grid-row: span 2 / span 2;
   grid-column-start: 2;
   grid-row-start: 7;
 }
 
-.div6 {
+.Sect6 {
   grid-row: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 5;
 }
 
-.div7 {
+.Sect7 {
   grid-row: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 7;
 }
 
-.div8 {
+.Sect8 {
   grid-row: span 4 / span 4;
   grid-column-start: 4;
   grid-row-start: 5;
@@ -72,12 +80,12 @@
 
 @media (max-width: 768px) {
   .parent {
-    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-columns: 1fr; 
     grid-template-rows: unset; /* Automáticamente define las filas */
   }
 
-  .parent div {
-    grid-column: span 1; /* Asegúrate de que cada div ocupe toda la columna */
+  .parent section {
+    grid-column: span 1; 
     grid-row: auto; /* Permite que las filas se ajusten automáticamente */
     height: auto;
   }
@@ -91,11 +99,29 @@
     grid-template-rows: auto; /* Filas ajustadas automáticamente */
   }
 
-  .parent div {
-    grid-column: span 1; /* Cada div ocupa una columna */
+  .parent section {
+    grid-column: span 1; /* Cada section ocupa una columna */
     grid-row: auto; /* Ajusta automáticamente las filas */
   }
 }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .parent {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+      gap: 10px;
+  }
+
+  /* Colocar la sección 1 y 2 en filas distintas */
+  .Sect1 {
+      grid-column: 1 / -1; /* Ocupa toda la fila */
+  }
+  .Sect2 {
+      grid-column: 1 / -1; /* Ocupa toda la fila */
+  }
+}
+
+
+
 
 
 body {
@@ -184,12 +210,7 @@ body .blur {
   background-color: #0d4d39;
 }
 
-/* Main Content */
-.main-content {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 /* Profile Section */
 .profile {
