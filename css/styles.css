@@ -27,9 +27,10 @@
   margin: 10px auto;
 }
 
+/*
 .parent section{
   background-color:#3498db;
-}
+}*/
   
 .Sect1 {
   grid-column: span 3 / span 3;
