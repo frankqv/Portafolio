@@ -7,6 +7,12 @@
   --quaternary: #D1CB95;
 }
 
+section {
+  padding: 2rem;
+  height: auto 100vh;
+  counter-reset: auto;
+}
+
 /* Main Content */
 .main-content {
   padding: 2rem;
@@ -26,54 +32,80 @@
   align-content: center;
   margin: 10px auto;
 }
-
 /*
-.parent section{
-  background-color:#3498db;
+@media (min-width: 768px) {
+  main section{
+    max-height: auto 90vh;
+    overflow: auto;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto 80vh;
+  }
 }*/
-  
+
+
 .Sect1 {
-  grid-column: span 3 / span 3;
+  grid-column: span 3 / span 3 ;
   grid-row: span 4 / span 4;
+  height: auto;
+  grid-row-start: 1;
+
 }
 
 .Sect2 {
-  grid-row: span 4 / span 4;
+  grid-row: span 4 auto / span 4 auto;
   grid-column-start: 4;
+  grid-row-start: 1;
+  height: auto;
+  scale: auto;
 }
 
 .Sect3 {
   grid-row: span 4 / span 4;
   grid-row-start: 5;
+  height: auto;
+  scale: auto;
 }
 
 .Sect4 {
   grid-row: span 2 / span 2;
   grid-row-start: 5;
+  height: auto;
+  scale: auto;
 }
 
 .Sect5 {
   grid-row: span 2 / span 2;
   grid-column-start: 2;
   grid-row-start: 7;
+  height: auto;
+  scale: auto;
 }
 
 .Sect6 {
   grid-row: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 5;
+  height: auto;
+  scale: auto;
 }
 
 .Sect7 {
   grid-row: span 2 / span 2;
   grid-column-start: 3;
-  grid-row-start: 7;
+  grid-row-start: 7;  height: auto;
+  scale: auto;
 }
 
 .Sect8 {
   grid-row: span 4 / span 4;
   grid-column-start: 4;
-  grid-row-start: 5;
+  grid-row-start: 5;  height: auto;
+  scale: auto;
 }
       
 
@@ -256,7 +288,7 @@ body .blur {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   align-items: start;
-}
+} /*para eliminar delate after*/
 
 /* Card Styles */
 .card {
@@ -265,6 +297,7 @@ body .blur {
   padding: 1.5rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto 80vh;
 }
 
 .card:hover {
