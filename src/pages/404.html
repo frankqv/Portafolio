@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+            color: #333;
+            text-align: center;
+            --main-color: rgba(15, 15, 15, 0.75);
+            --primary: rgb(0, 145, 255);
+            --secoundary: #1A644E;
+            --tertiary: #B2D942;
+            --quaternary: #D1CB95;
+        }
+
+        .error-container {
+            max-width: 600px;
+            padding: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #4074a1;
+        }
+
+        .error-message {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: var(--secoundary);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color:var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-title">404</div>
+        <p class="error-message">Oops! The page you are looking for doesn't exist or has been moved.</p>
+        <a href="/" class="home-link">Go Back Home</a>
+    </div>
+</body>
+</html>
