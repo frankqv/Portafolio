@@ -7,19 +7,142 @@
   --quaternary: #D1CB95;
 }
 
+#matrixCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  filter: blur(7px);
+  z-index: -12;
+}
+
+/********** body **********/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #111;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+/********** end_body **********/
+
+
+/********** init_efectos_body **********/
+body.night-mode .footer {
+  background: #1e1e1e;
+}
+body.night-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+  svg{
+    fill: #f5f5f5;
+  }
+}
+body.night-mode .header {
+  background-color: #1e1e1e;
+}
+/* Estilo para el efecto blur */
+body.night-mode .blur {
+  background-color: rgba(34, 34, 34, 0.5);
+  backdrop-filter: blur(3px);
+}
+body .blur {
+  background-color: rgba(245, 245, 245, 0.5);
+  backdrop-filter: blur(3px);
+}
+/********** end_efectos_body **********/
+
+/********** div-main**********/
+.div-main {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows:
+    auto 1fr auto;
+
+}
+/********** end_div **********/
+
+/********** header **********/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-link {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+/* Logo_FrankQV*/ 
+.logo {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.theme-btn {
+  background: var(--secoundary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.theme-btn:hover {
+  background-color: #0d4d39;
+}
+/*.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.card .btn {
+  background: var(--secoundary);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.card .btn:hover {
+  background-color: #0d4d39;
+}*/
+/************** end_header **************/
+
+
+
+
+
+/*
 section {
   padding: 2rem;
   height: auto 100vh;
   counter-reset: auto;
 }
 
-/* Main Content */
+/* Main Content 
 .main-content {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
-
+/*
 .parent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -47,7 +170,7 @@ section {
   }
 }*/
 
-
+/********************
 .Sect1 {
   grid-column: span 3 / span 3 ;
   grid-row: span 4 / span 4;
@@ -107,49 +230,40 @@ section {
   grid-row-start: 5;  height: auto;
   scale: auto;
 }
-      
-
-
-
 @media (max-width: 768px) {
   .parent {
     grid-template-columns: 1fr; 
-    grid-template-rows: unset; /* Automáticamente define las filas */
+    grid-template-rows: unset; /* Automáticamente define las filas 
   }
 
   .parent section {
     grid-column: span 1; 
-    grid-row: auto; /* Permite que las filas se ajusten automáticamente */
+    grid-row: auto; /* Permite que las filas se ajusten automáticamente 
     height: auto;
   }
 }
-
-
-/* Para tablets (768px a 1024px) */
+/* Para tablets (768px a 1024px) 
 @media (max-width: 1024px) and (min-width: 768px) {
   .parent {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-template-rows: auto; /* Filas ajustadas automáticamente */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas 
+    grid-template-rows: auto; /* Filas ajustadas automáticamente 
   }
-
   .parent section {
-    grid-column: span 1; /* Cada section ocupa una columna */
-    grid-row: auto; /* Ajusta automáticamente las filas */
+    grid-column: span 1; /* Cada section ocupa una columna 
+    grid-row: auto; /* Ajusta automáticamente las filas 
   }
 }
-
 @media (max-width: 1024px) and (min-width: 768px) {
   .parent {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas 
       gap: 10px;
   }
-
-  /* Colocar la sección 1 y 2 en filas distintas */
+  /* Colocar la sección 1 y 2 en filas distintas 
   .Sect1 {
-      grid-column: 1 / -1; /* Ocupa toda la fila */
+      grid-column: 1 / -1; /* Ocupa toda la fila 
   }
   .Sect2 {
-      grid-column: 1 / -1; /* Ocupa toda la fila */
+      grid-column: 1 / -1; /* Ocupa toda la fila 
   }
 }
 
@@ -157,95 +271,24 @@ section {
 
 
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #111;
-  background-color: #fff;
-  transition: all 0.3s ease;
-  
-}
 
 
-body.night-mode {
-  background-color: #121212;
-  color: #f5f5f5;
-  svg{
-    fill: #f5f5f5;
-  }
 
-}
-
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-body.night-mode .header {
-  background-color: #1e1e1e;
-}
-
-/* Estilo para el efecto blur */
-body.night-mode .blur {
-  background-color: rgba(34, 34, 34, 0.5);
-  backdrop-filter: blur(3px);
-}
-body .blur {
-  background-color: rgba(245, 245, 245, 0.5);
-  backdrop-filter: blur(3px);
-}
-
-#matrixCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+iframe {
   width: 100%;
-  height: 100vh;
-  filter: blur(7px);
-  z-index: -10;
-}
-
-/* Logo */ 
-.logo {
-  font-size: 1.5rem;
-  color: var(--primary);
-}
-
-.actions {
-  display: flex;
-  gap: 1rem;
-}
-
-.header-link {
-  text-decoration: none;
-  color: var(--primary);
-}
-
-.theme-btn {
-  background: var(--secoundary);
-  color: white;
+  height: 200px;
   border: none;
-  padding: 0.5rem 1rem;
   border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  margin-bottom: 1rem;
 }
 
-.theme-btn:hover {
-  background-color: #0d4d39;
-}
+
+
 
 
 
 /* Profile Section */
+/*
 .profile {
   display: flex;
   gap: 2rem;
@@ -282,7 +325,7 @@ body .blur {
   }
 }
 
-/* Grid Section */
+/* Grid Section 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -290,7 +333,12 @@ body .blur {
   align-items: start;
 } /*para eliminar delate after*/
 
-/* Card Styles */
+
+
+
+
+
+/* Card Styles 
 .card {
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -310,37 +358,28 @@ body.night-mode .card {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
 }
 
-.card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  color: var(--primary);
-}
-
-.card .btn {
-  background: var(--secoundary);
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  display: inline-block;
-  margin-top: 1rem;
-}
-
-.card .btn:hover {
-  background-color: #0d4d39;
-}
-
-iframe {
-  width: 100%;
-  height: 200px;
-  border: none;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
 
 
 
-/* Footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********** Footer **********/
 .footer {
   text-align: center;
   padding: 1.5rem;
@@ -362,9 +401,7 @@ iframe {
   text-decoration: none;
 }
 
-body.night-mode .footer {
-  background: #1e1e1e;
-}
+
 
 /* Estilo del corazón */
 .corazon {
@@ -376,7 +413,6 @@ body.night-mode .footer {
   display: inline-block;
   animation: latido 1s infinite;
 }
-
 .corazon::before,
 .corazon::after {
   content: "";
@@ -386,17 +422,14 @@ body.night-mode .footer {
   background-color: red;
   border-radius: 50%;
 }
-
 .corazon::before {
   top: -7.5px;
   left: 0;
 }
-
 .corazon::after {
   left: 7.5px;
   top: 0;
 }
-
 /* Animación para simular el latido del corazón */
 @keyframes latido {
   0%, 100% {
@@ -406,14 +439,4 @@ body.night-mode .footer {
       transform: scale(0.5) rotate(-45deg);
   }
 }
-
-
-/* Responsive for larger screens */
-@media (min-width: 1200px) {
-  .grid {
-      grid-template-columns: repeat(3, 1fr);
-  }
-  .profile {
-      gap: 3rem;
-  }
-}
+/********** end_footer **********/
