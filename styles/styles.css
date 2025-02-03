@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   filter: blur(7px);
   z-index: -12;
 }
@@ -25,6 +25,13 @@ body {
   background-color: #fff;
   transition: all 0.3s ease;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
 /********** end_body **********/
 
 
@@ -53,15 +60,16 @@ body .blur {
 }
 /********** end_efectos_body **********/
 
+
 /********** div-main**********/
 .div-main {
   display: grid;
-  min-height: 100dvh;
-  grid-template-rows:
-    auto 1fr auto;
-
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; /* Header | Contenido | Footer */
+  width: 100%;
 }
 /********** end_div **********/
+
 
 /********** header **********/
 .header {
@@ -104,28 +112,15 @@ body .blur {
 .theme-btn:hover {
   background-color: #0d4d39;
 }
-/*.card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  color: var(--primary);
-}
-
-.card .btn {
-  background: var(--secoundary);
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  display: inline-block;
-  margin-top: 1rem;
-}
-
-.card .btn:hover {
-  background-color: #0d4d39;
-}*/
 /************** end_header **************/
 
-
+iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
 
 
 
@@ -134,19 +129,19 @@ body .blur {
 .parent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(8, auto);
   gap: 8px;
-  height: 100dvh;
-  margin: 10px auto ;
+  margin: 10px auto;
 }
 
-.parent div{
-  background-color: #f9f9f9a1;
+.parent div {
+  background-color: rgba(249, 249, 249, 0.63);
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .parent:hover {
   transform: translateY(-5px);
@@ -203,222 +198,47 @@ body.night-mode .parent div{
   grid-column-start: 4;
   grid-row-start: 5;
 }
-      
-
-
-
-@media (max-width: 768px) {
-  .parent {
-    grid-template-columns: 1fr; /* Una sola columna */
-    grid-template-rows: unset; /* Automáticamente define las filas */
-  }
-
-  .parent div {
-    grid-column: span 1; /* Asegúrate de que cada div ocupe toda la columna */
-    grid-row: auto; /* Permite que las filas se ajusten automáticamente */
-    height: auto;
-  }
-}
-
-
-/* Para tablets (768px a 1024px) */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .parent {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-template-rows: auto; /* Filas ajustadas automáticamente */
-  }
-
-  .parent div {
-    grid-column: span 1; /* Cada div ocupa una columna */
-    grid-row: auto; /* Ajusta automáticamente las filas */
-  }
-}
 /********** end_main **********/
 
 
 
-
-
-
-/*
-
-
-.parent {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  gap: 8px;
-  height: 100vh;
-  width: auto 100vw;
-  padding: auto;
-  padding-left: auto 5vh;
-  align-content: center;
-  margin: 10px auto;
+/********** Responsividad **********/
+/* Pantallas medianas (Tablets) */
+@media (max-width: 1024px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    max-width: 100vh;
+  }
+  
+  /* Resetear posiciones específicas de grid */
+  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+    grid-column: span 1;
+    grid-row: auto !important;
+  }
 }
-/*
-@media (min-width: 768px) {
-  main section{
-    max-height: auto 90vh;
-    overflow: auto;
+
+/* Pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr; /* 1 columna */
+    padding: 0 10px; /* Añadir padding lateral */
+  }
+  
+  /* Forzar todos los elementos a ocupar 1 columna */
+  .parent > div {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    width: 90%;
+    max-width: 100%;
+    margin: 5px 0; /* Espaciado vertical */
+  }
+  
+  /* Optimizar espaciado */
+  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
     padding: 1rem;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: auto 80vh;
-  }
-}*/
-
-/********************
-
-
-
-@media (max-width: 768px) {
-  .parent {
-    grid-template-columns: 1fr; 
-    grid-template-rows: unset; /* Automáticamente define las filas 
-  }
-
-  .parent section {
-    grid-column: span 1; 
-    grid-row: auto; /* Permite que las filas se ajusten automáticamente 
-    height: auto;
+    margin: 5px 0;
   }
 }
-/* Para tablets (768px a 1024px) 
-@media (max-width: 1024px) and (min-width: 768px) {
-  .parent {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas 
-    grid-template-rows: auto; /* Filas ajustadas automáticamente 
-  }
-  .parent section {
-    grid-column: span 1; /* Cada section ocupa una columna 
-    grid-row: auto; /* Ajusta automáticamente las filas 
-  }
-}
-@media (max-width: 1024px) and (min-width: 768px) {
-  .parent {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas 
-      gap: 10px;
-  }
-  /* Colocar la sección 1 y 2 en filas distintas 
-  .Sect1 {
-      grid-column: 1 / -1; /* Ocupa toda la fila 
-  }
-  .Sect2 {
-      grid-column: 1 / -1; /* Ocupa toda la fila 
-  }
-}
-
-
-
-
-
-
-
-
-iframe {
-  width: 100%;
-  height: 200px;
-  border: none;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-
-
-
-
-
-/* Profile Section */
-/*
-.profile {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: #f1f1f1;
-}
-
-.profile .intro, .profile .about-me{
-  flex: 1;
-  min-width: 300px;
-  box-sizing: border-box;
-}
-
-.profile .intro h2, .about-me h3{
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--quaternary);
-}
-
-
-
-.profile .about-me ul {
-  padding-left: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .profile {
-      flex-direction: column;
-  }
-  .profile .intro, .profile .about-me {
-      margin-bottom: 1.5rem;
-  }
-}
-
-/* Grid Section 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  align-items: start;
-} /*para eliminar delate after*/
-
-
-
-
-
-
-/* Card Styles 
-.card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: auto 80vh;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-body.night-mode .card {
-  background-color: #1e1e1e;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -431,7 +251,8 @@ body.night-mode .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem; /* Espaciado entre elementos */
+  gap: 0.5rem;
+
 }
 
 .footer-content {
