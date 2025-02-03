@@ -73,7 +73,7 @@ body .blur {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 12;
 }
 .header-link {
   text-decoration: none;
@@ -129,7 +129,160 @@ body .blur {
 
 
 
+
+/********** main **********/
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 8px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.parent div{
+  background-color:#3498db;
+}
+  
+.div1 {
+  grid-column: span 3 / span 3;
+  grid-row: span 4 / span 4;
+}
+
+.div2 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+}
+
+.div3 {
+  grid-row: span 4 / span 4;
+  grid-row-start: 5;
+}
+
+.div4 {
+  grid-row: span 2 / span 2;
+  grid-row-start: 5;
+}
+
+.div5 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 7;
+}
+
+.div6 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 5;
+}
+
+.div7 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 7;
+}
+
+.div8 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+  grid-row-start: 5;
+}
+      
+
+
+
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: unset; /* Automáticamente define las filas */
+  }
+
+  .parent div {
+    grid-column: span 1; /* Asegúrate de que cada div ocupe toda la columna */
+    grid-row: auto; /* Permite que las filas se ajusten automáticamente */
+    height: auto;
+  }
+}
+
+
+/* Para tablets (768px a 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-rows: auto; /* Filas ajustadas automáticamente */
+  }
+
+  .parent div {
+    grid-column: span 1; /* Cada div ocupa una columna */
+    grid-row: auto; /* Ajusta automáticamente las filas */
+  }
+}
+/********** end_main **********/
+
+
+
+
+
+
 /*
+
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr; 
+    grid-template-rows: unset;
+  }
+
+  .parent section {
+    grid-column: span 1; 
+    grid-row: auto; 
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas 
+    grid-template-rows: auto; 
+  }
+  .parent section {
+    grid-column: span 1; 
+    grid-row: auto; 
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .parent {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas 
+      gap: 10px;
+  }
+  /* Colocar la sección 1 y 2 en filas distintas 
+  .Sect1 {
+      grid-column: 1 / -1; 
+  }
+  .Sect2 {
+      grid-column: 1 / -1; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 section {
   padding: 2rem;
   height: auto 100vh;
@@ -171,65 +324,9 @@ section {
 }*/
 
 /********************
-.Sect1 {
-  grid-column: span 3 / span 3 ;
-  grid-row: span 4 / span 4;
-  height: auto;
-  grid-row-start: 1;
 
-}
 
-.Sect2 {
-  grid-row: span 4 auto / span 4 auto;
-  grid-column-start: 4;
-  grid-row-start: 1;
-  height: auto;
-  scale: auto;
-}
 
-.Sect3 {
-  grid-row: span 4 / span 4;
-  grid-row-start: 5;
-  height: auto;
-  scale: auto;
-}
-
-.Sect4 {
-  grid-row: span 2 / span 2;
-  grid-row-start: 5;
-  height: auto;
-  scale: auto;
-}
-
-.Sect5 {
-  grid-row: span 2 / span 2;
-  grid-column-start: 2;
-  grid-row-start: 7;
-  height: auto;
-  scale: auto;
-}
-
-.Sect6 {
-  grid-row: span 2 / span 2;
-  grid-column-start: 3;
-  grid-row-start: 5;
-  height: auto;
-  scale: auto;
-}
-
-.Sect7 {
-  grid-row: span 2 / span 2;
-  grid-column-start: 3;
-  grid-row-start: 7;  height: auto;
-  scale: auto;
-}
-
-.Sect8 {
-  grid-row: span 4 / span 4;
-  grid-column-start: 4;
-  grid-row-start: 5;  height: auto;
-  scale: auto;
-}
 @media (max-width: 768px) {
   .parent {
     grid-template-columns: 1fr; 
