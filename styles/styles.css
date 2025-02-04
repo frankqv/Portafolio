@@ -7,6 +7,120 @@
   --quaternary: #D1CB95;
 }
 
+/* Añade estos estilos a tu CSS */
+
+/****** Enlaces Generales ******/
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--tertiary);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--tertiary);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/****** Header Links ******/
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.header-link:hover {
+  background: rgba(var(--primary-rgb), 0.1);
+  transform: translateY(-2px);
+}
+
+.header-link svg {
+  transition: transform 0.3s ease;
+}
+
+.header-link:hover svg {
+  transform: scale(1.1);
+}
+
+/****** Social Icons ******/
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(var(--primary-rgb), 0.1);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/****** Badge Links ******/
+.badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 20px;
+  background: rgba(var(--primary-rgb), 0.1);
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.badge-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/****** Footer Links ******/
+.footer-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-links:hover {
+  background: rgba(var(--primary-rgb), 0.1);
+}
+
+
+
+
 #matrixCanvas {
   position: fixed;
   top: 0;
