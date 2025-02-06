@@ -7,7 +7,126 @@
   --quaternary: #D1CB95;
 }
 
+/* Sección CV */
+.cv-section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
 
+body.night-mode .cv-section {
+  background: rgba(30, 30, 30, 0.9);
+  color: #fff;
+}
+
+.cv-section:hover {
+  transform: translateY(-5px);
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.cv-subtitle {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+}
+
+/* Vista previa del PDF */
+.cv-preview-container {
+  border: 2px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.cv-preview {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+.pdf-alternative {
+  padding: 2rem;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+/* Botones y acciones */
+.cv-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.format-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pdf-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.docx-btn {
+  background: #2b579a;
+  color: white;
+}
+
+.txt-btn {
+  background: #666;
+  color: white;
+}
+
+.print-btn {
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.6rem 1.5rem;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-preview {
+      height: 300px;
+  }
+  
+  .cv-actions {
+      flex-direction: column;
+  }
+  
+  .format-buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .download-options {
+      text-align: center;
+  }
+}
 
 /****** Enlaces Generales ******/
 a {
