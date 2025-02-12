@@ -223,19 +223,6 @@ a:hover::after {
   transform: translateY(-2px);
 }
 
-/****** Footer Links ******/
-.footer-links {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.footer-links:hover {
-  background: rgba(var(--primary-rgb), 0.1);
-}
 
 
 
@@ -474,6 +461,19 @@ body.night-mode .parent div{
 }
 
 
+/****** Footer Links ******/
+.footer-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-links:hover {
+  background: rgba(var(--primary-rgb), 0.1);
+}
 
 
 /********** Footer **********/
