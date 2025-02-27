@@ -15,7 +15,8 @@ Principales herramientas:
 - **Otros:** Git/GitHub (*building*), Scrum & Agile  
 
 ### 📚 Estudios  
-- Codecademy | Platzi | Udemy  
+- Codecademy | Udemy
+-  Platzi  
 - SENA | Universidad CUN  
 - YouTube (autodidacta)  
 
