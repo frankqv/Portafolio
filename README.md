@@ -1,5 +1,12 @@
 # Frank-QV - DEV 💻  
-**Portafolio Digital** | [GitHub]([PORTFOLIO](https://frankqv.github.io/portfolio/pages/home.html) | 📧 Contacto  
+
+ 📧 Contacto | **Portafolio Digital** | <br>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/francisco-quinonez-v-frankqv-916506327)
+[![portfolio](https://img.shields.io/badge/portfolio-000?style=for-the-badge&logo=github&logoColor=white)](https://frankqv.github.io/portfolio)
+
+
+----------------------------------------------------------------
+
 
 Bienvenido/a a mi espacio digital donde las ideas se transforman en soluciones tecnológicas.  
 <br>
