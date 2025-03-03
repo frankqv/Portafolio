@@ -33,7 +33,7 @@ Proyectos innovadores en desarrollo fullstack. *[Explorar repositorios →]([htt
 ### 💼 Experiencia  
 **Desarrollador de Software**  
 - Soporte técnico nivel 2  
-- *[Ver detalles completos →](#)*  
+- *[Ver detalles completos →](https://frankqv.github.io/portfolio)*  
 
 ---
 
