@@ -36,6 +36,8 @@ Proyectos innovadores en desarrollo fullstack. *[Explorar repositorios →]([htt
 - *[Ver detalles completos →](https://frankqv.github.io/portfolio)*  
 
 ---
+con esfuerso constante y dedicacion
+- Paul Villafuerte: Sin miedo al exito (Muchachos)
 
 *“Los sufrimientos de este tiempo no son dignos de ser comparados con la gloria venidera”*  
 – Romanos 8:18  
