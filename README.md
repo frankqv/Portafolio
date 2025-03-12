@@ -5,7 +5,7 @@
 [![portfolio](https://img.shields.io/badge/portfolio-000?style=for-the-badge&logo=github&logoColor=white)](https://frankqv.github.io/portfolio)
 
 
-----------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
 
 
 Bienvenido/a a mi espacio digital donde las ideas se transforman en soluciones tecnológicas.  
