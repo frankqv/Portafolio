@@ -38,6 +38,7 @@ Proyectos innovadores en desarrollo fullstack. *[Explorar repositorios →]([htt
 ---
 con esfuerso constante y dedicacion
 - Paul Villafuerte: Sin miedo al exito (Muchachos)
+-AMOR FATI
 
 *“Los sufrimientos de este tiempo no son dignos de ser comparados con la gloria venidera”*  
 – Romanos 8:18  
