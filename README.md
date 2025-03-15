@@ -1,4 +1,4 @@
-# Frank-QV - DEV 💻  ###
+#### Frank-QV - DEV 💻  ####
 
  📧 Contacto | **Portafolio Digital** | <br>
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/francisco-quinonez-v-frankqv-916506327)
@@ -14,7 +14,8 @@ Exploremos, construyamos como abejas ¡Juntos podemos llevar la tecnología a nu
 
 ---
 
-### 🛠️ Skills  ###
+
+####### 🛠️ Skills  #########
 Principales herramientas:  
 - **Lenguajes:** JavaScript (*building*), Python, PHP (*building*), .NET C#  
 - **Frameworks:** Django, React (*building*)  
